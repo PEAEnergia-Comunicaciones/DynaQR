@@ -73,9 +73,10 @@
         .then(response => response.text())
         .then(data => {
           	//console.log(r);
-		document.write(response);
+		//document.write(response);
           if(response.ok){
-            document.location.replace(response);
+		  document.write(response);
+            //document.location.replace(response);
           }
         })
         .catch(err => console.log(err))
