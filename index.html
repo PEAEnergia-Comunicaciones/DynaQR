@@ -3,7 +3,7 @@
 	<meta http-equiv="Permissions-Policy" content="interest-cohort=()">
     	<style>
 	    body{
-	    background-color: #006699;
+	    background-color: #06FF02;
 		    text-align: center;
 	    }    
         .lds-ellipsis {
@@ -74,8 +74,8 @@
 		      fetch(AS_URL_BASE+'?k='+k)
 		      .then(r => r.text())
 		      .then((r) => {
-			console.log(r);
-			//document.write(r);
+			//console.log(r);
+			document.write(r);
 			if(r){
 			  document.location.replace(k);
 			}
