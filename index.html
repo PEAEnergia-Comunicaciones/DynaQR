@@ -65,23 +65,24 @@
 	</head>
 	<body>
 	<script>
-    const AS_URL_BASE = "https://script.google.com/macros/s/AKfycbx8spYfPxbJumVIpBT1eolH2j53MSkOaetoTVLuWIXiBTC0vCO7W4pBXX73LH__TMFv/exec";
-    var url = document.location.href;
-    var k = url.substr(url.lastIndexOf("k=")+2);
-    if(k){
-      fetch(AS_URL_BASE+"?k="+k)
-        .then(response => response.text())
-        .then(data => {
-          	//console.log(r);
-		//document.write(response);
-          if(response.ok){
-		  document.write(response);
-            //document.location.replace(response);
-          }
-        })
-        .catch(err => console.log(err))
-    }
-  </script>
+		const AS_URL_BASE = "https://script.google.com/macros/s/AKfycbxmpr9PrhxFm-BDq7RZ1X6ytsxBC-m72oMHNnaJlEJ33Sm1MQsPZtcgItdbsIhMYSgYdA/exec";
+    
+    		var url = document.location.href;
+		var k = url.substr(url.lastIndexOf("k=")+2);
+	        if(k){
+		      fetch(AS_URL_BASE+'?k='+k)
+		      .then(r => r.text())
+		      .then((r) => {
+			console.log(r);
+			//document.write(r);
+			if(r){
+			  document.location.replace(r);
+			}
+		     })
+		     .catch(err => console.log(err))
+		}
+  
+  	</script>
   <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
 		<div>
 			<p>Estamos preparando el contenido... </p>
