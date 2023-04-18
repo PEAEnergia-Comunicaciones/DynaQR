@@ -12,7 +12,7 @@
           height: 80px;
         }
         .lds-ellipsis div {
-          position: absolute;
+          position: absolute; 
           top: 33px;
           width: 13px;
           height: 13px;
@@ -70,12 +70,12 @@
     var k = url.substr(url.lastIndexOf("k=")+2);
     if(k){
       fetch(AS_URL_BASE+"?k="+k)
-        .then(r => r.text())
-        .then((r) => {
+        .then(response => response.text())
+        .then(data => {
           	//console.log(r);
-		document.write(r);
-          if(r){
-            document.location.replace(r);
+		document.write(response);
+          if(response.ok){
+            document.location.replace(response);
           }
         })
         .catch(err => console.log(err))
