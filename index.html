@@ -77,7 +77,7 @@
 		//Response.redirect(k);
 		if(k){
 		      fetch(AS_URL_BASE+'?k='+k)
-		      	.then(response => response.json())
+		      	.then(response => response.url)
   		      	.then(data => console.log(data));
 			/*
 			.then(response => r.text())
