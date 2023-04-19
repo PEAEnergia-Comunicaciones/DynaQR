@@ -3,7 +3,7 @@
 	<meta http-equiv="Permissions-Policy" content="interest-cohort=()">
     	<style>
 	    body{
-	    background-color: #06FF02;
+	    background-color: #B4A2C1;
 		    text-align: center;
 	    }    
         .lds-ellipsis {
@@ -69,17 +69,15 @@
 		const AS_URL_BASE = "https://script.google.com/macros/s/AKfycbxmpr9PrhxFm-BDq7RZ1X6ytsxBC-m72oMHNnaJlEJ33Sm1MQsPZtcgItdbsIhMYSgYdA/exec";
     
     		var url = document.location.href;
-		var k = url.substr(url.lastIndexOf("k=")+2);
+		    var k = url.substr(url.lastIndexOf("k=")+2);
 	        if(k){
 		      fetch(AS_URL_BASE+'?k='+k)
 		      .then(r => r.text())
 		      .then((r) => {
-			//console.log(r);
-			document.write(r);
-			if(r){
-			  document.location.replace(k);
-			}
-		     })
+                //document.write(r);
+                console.log(r);
+                if(r){
+                document.location.replace(k);} })
 		     .catch(err => console.log(err))
 		}
   
