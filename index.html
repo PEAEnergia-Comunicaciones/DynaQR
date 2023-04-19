@@ -78,9 +78,11 @@
 		      .then(r => r.text())
 		      .then((r) => {
                 //document.write(r);
-                console.log(r);
-                if(r){
-                document.location.replace(r);} })
+                //console.log(r);
+			document.location.replace(r);
+                /*if(r){
+                document.location.replace(r);} }*/
+			   ) 
 		     .catch(err => console.log(err))
 		}
   
